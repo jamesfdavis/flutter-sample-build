@@ -1,6 +1,10 @@
 # app_build
 
-A new Flutter project.
+A sample Flutter project.
+
+Chapter 1. Setup and Configuration
+- 
+Chapter 2. Debug Environment
 
 ## Getting Started
 
