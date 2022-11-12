@@ -2,8 +2,17 @@ import 'package:flutter/material.dart';
 
 main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  final List<String> _products = ['Food Tester'];
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +27,21 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: <Widget>[
             Container(
-              margin: const  EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               child: ElevatedButton(
                   onPressed: () {}, child: const Text('Add Product')),
             ),
-            Card(
-              child: Column(children: <Widget>[
-                Image.asset('assets/food.jpeg'),
-                const Text('Food Paradise')
-              ]),
+            Column(
+              children: _products
+                  .map((element) => Card(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/food.jpeg'),
+                            Text(element)
+                          ],
+                        ),
+                      ))
+                  .toList(),
             )
           ],
         ),
@@ -36,10 +51,7 @@ class MyApp extends StatelessWidget {
 }
 
 
-
-
-
-// import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 
 // void main() {
 //   runApp(const MyApp());
