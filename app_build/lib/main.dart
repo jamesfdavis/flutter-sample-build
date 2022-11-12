@@ -29,7 +29,12 @@ class _MyAppState extends State<MyApp> {
             Container(
               margin: const EdgeInsets.all(10.0),
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text('Add Product')),
+                  onPressed: () {
+                    setState(() {
+                      _products.add('Food Tester Two');
+                    });
+                  },
+                  child: const Text('Add Product')),
             ),
             Column(
               children: _products
