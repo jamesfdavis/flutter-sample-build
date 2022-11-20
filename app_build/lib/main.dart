@@ -25,11 +25,10 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Easy List'),
-        ),
-        body: const ProductManager(startingProduct: "startingProduct")
-      ),
+          appBar: AppBar(
+            title: const Text('Easy List'),
+          ),
+          body: const ProductManager(startingProduct: "Food Tester")),
     );
   }
 }

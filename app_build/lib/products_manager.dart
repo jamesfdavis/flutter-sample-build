@@ -41,7 +41,9 @@ class _ProductManagerState extends State<ProductManager> {
             },
             child: const Text('Add Product')),
       ),
-      Products(_products)
+      const Products(
+        products: ['That product'],
+      )
     ]);
   }
 }
