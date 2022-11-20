@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Easy List'),
         ),
-        body: const ProductManager("startingProduct")
+        body: const ProductManager(startingProduct: "startingProduct")
       ),
     );
   }
