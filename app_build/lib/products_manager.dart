@@ -23,6 +23,12 @@ class _ProductManagerState extends State<ProductManager> {
   }
 
   @override
+  void didUpdateWidget(covariant ProductManager oldWidget) {
+    //Data in the old widget.
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
