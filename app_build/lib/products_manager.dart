@@ -33,6 +33,8 @@ class _ProductManagerState extends State<ProductManager> {
     setState(() {
       _products.add(product);
     });
+    // ignore: avoid_print
+    print(_products);
   }
 
   @override

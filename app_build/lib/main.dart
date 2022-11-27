@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/rendering.dart';
 
 import './products_manager.dart';
 
-main() => runApp(const MyApp());
+main() {
+  // debugPaintSizeEnabled = true;
+  // debugPaintBaselinesEnabled = true;
+  // debugPaintPointersEnabled = true;
+
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowMaterialGrid: false,
       title: "Theme Stuff",
       theme: ThemeData(
         // Define the default brightness and colors.
